@@ -1,0 +1,11 @@
+.captcha-box {
+    margin-top: 10px;
+}
+.captcha-box  {
+    transform: scale(0.8); 
+    transform-origin: 0 0;
+  }
+ 
+.captcha{
+    width: 100px;
+}

@@ -1,0 +1,94 @@
+/* Table.css */
+.table-container {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 80%;
+    justify-content: center;
+    margin-top: 1%;
+    margin-left: 10%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table-container h2 {
+    background-color: rgb(103, 205, 171);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    height: 40px;
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.custom-table th,
+.custom-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.custom-table th {
+    background-color: #22154e;
+    color: white;
+    font-size: 0.8rem;
+}
+
+
+.progress-bar {
+    background-color: red;
+    height: 20px;
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.filled-bar {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(75deg,
+            #00FF00 0%, #00FF00 5%,
+            #2f602f 5%, #2f602f 10%,
+            #2f602f 10%, #00FF00 10%,
+            #00FF00 15%, #2f602f 15%,
+            #2f602f 15%, #00FF00 20%,
+            #00FF00 20%, #2f602f 25%,
+            #2f602f 25%, #00FF00 30%,
+            #00FF00 30%, #2f602f 35%,
+            #2f602f 35%, #00FF00 40%,
+            #00FF00 40%, #2f602f 45%,
+            #2f602f 45%, #00FF00 50%,
+            #00FF00 50%, #2f602f 55%,
+            #2f602f 55%, #00FF00 60%);
+    /* background-size: 100% 100%; */
+
+    background-size: 200% 100%;
+
+    animation: moveGradient 5s linear infinite;
+}
+
+@keyframes moveGradient {
+    0% {
+        background-position: 100% 0;
+    }
+
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+/*   
+  .filled-bar::after {
+    content: '';
+    background-color: green;
+    height: 100%;
+    width: inherit;
+    position: absolute;
+  } */

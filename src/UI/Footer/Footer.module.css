@@ -1,0 +1,17 @@
+
+.footerMain{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(30, 30, 59);
+}
+.footerMain p{
+ color: aliceblue;
+}
+.footerMain a{
+    color: aqua;
+}

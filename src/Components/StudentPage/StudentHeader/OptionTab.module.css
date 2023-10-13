@@ -1,0 +1,23 @@
+
+.info-item {
+    width: calc(13.66% ); /* Adjusted for some spacing */
+    border-radius: 5px; /* Changed to pixels for a fixed radius */
+    background-color: aliceblue;
+    display: flex; /* Added to center content vertically */
+    flex-direction: column; /* Added to stack image and text vertically */
+    align-items: center; /* Center content horizontally */
+    padding-top: 10px; 
+    margin: 5px ;
+  }
+  
+  .info-item img {
+    max-height: 30px;
+    width: 30px;
+    border-radius: 50%;
+  }
+  
+  .info-item p {
+    text-align: center; /* Center the text */
+    margin-top: 0px;
+    font-size: small;
+  }

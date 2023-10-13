@@ -1,0 +1,10 @@
+.rollNoInput{
+    display: block;
+    width: 90%;
+    height: 25px;
+    margin-top: 10px;
+}
+
+.rollNoInput:focus{
+    border-color: aqua;
+}

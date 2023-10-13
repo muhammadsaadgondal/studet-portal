@@ -1,0 +1,43 @@
+.all-list {
+    border: 15px solid white; /* Add a solid white border */
+    background-image: url('./chalkboard.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: scroll;
+    color: yellow;
+    text-align: left;
+    /* padding: ; */
+    /* Remove padding */
+    list-style-type: none;
+    padding: 3px 30px; 
+    height: 290px;
+    width: 52%;
+    margin-left: 7%;
+    border-radius: 5px;
+}
+
+.all-list h1 {
+    color: aliceblue;
+    text-align: center;
+}
+
+.list-item {
+    margin: 10px 0;
+}
+
+/* Style the hr element if needed */
+hr {
+    border: none;
+    height: 1px;
+    background-color: yellow;
+    margin: 5px 0;
+}
+
+.notice-board-hr {
+    background-color: aliceblue;
+    width: 20%;
+    margin-left: 40%;
+    height: 2px;
+    margin-top: -10px;
+}
