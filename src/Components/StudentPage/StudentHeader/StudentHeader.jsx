@@ -1,50 +1,55 @@
-import React, { Fragment } from 'react';
-import './StudentHeader.css'; // Import your CSS file for styling
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fas } from '@fortawesome/free-solid-svg-icons';
+import React, { Fragment, useEffect, useState } from 'react';
+import './StudentHeader.css';
+import OptionBar from './OptionBar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import OptionTab from './OptionTab';
-import Table from './Table';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
-const barData = [{
-    imgSrc: "./assets/images/StudentHeader/house.png",
-    text: "Dashboard"
-}, {
-    imgSrc: "./assets/images/StudentHeader/reading.png",
-    text: "Reg Card"
-}, {
-    imgSrc: "./assets/images/StudentHeader/money.png",
-    text: "Fees"
-}, {
-    imgSrc: "./assets/images/StudentHeader/contact.png",
-    text: "Result Card"
-}, {
-    imgSrc: "./assets/images/StudentHeader/boy.png",
-    text: "Profile"
-}, {
-    imgSrc: "./assets/images/StudentHeader/contact.png",
-    text: "Clearance"
-}, {
-    imgSrc: "./assets/images/StudentHeader/logout.png",
-    text: "Logout"
-}]
+const debounce = (func, delay) => {
+    let timeout;
+    return function (...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func(...args), delay);
+    };
+};
 
-library.add(fas);
 const StudentHeader = () => {
+    const [tabIsOpen, setTabIsOpen] = useState(true);
+
+    const updateWindowWidth = () => {
+        if (window.innerWidth <= 990) {
+            // console.log("Goori");
+            setTabIsOpen(false);
+        } else {
+            // console.log("GooriX");
+            setTabIsOpen(true);
+        }
+    };
+
+    const debouncedResizeHandler = debounce(updateWindowWidth, 250); // Adjust the debounce delay as needed
+
+    useEffect(() => {
+        // console.log("in Effect");
+        window.addEventListener('resize', debouncedResizeHandler);
+
+        return () => {
+            window.removeEventListener('resize', debouncedResizeHandler);
+        };
+    }, [debouncedResizeHandler]);
+
+
     return (
         <Fragment>
             <div className="student-header">
                 <div className="logo">
                     <img src="./assets/images/logo_with_text.png" alt="Logo" />
                 </div>
-                <div className="info">
-                    {barData.map(tab => (
-                        <OptionTab
-                            imgSrc={tab.imgSrc}
-                            text={tab.text}
-                        />
-                    ))}
-                </div>
+                {tabIsOpen ?
+                    <OptionBar />
+                    :
+                    <button className='toggle-button'>
+                        <FontAwesomeIcon icon={faBars} style={{color: "#ffffff",}} />
+                    </button>
+                }
                 <div className="student-image">
                     <img src="./assets/images/StudentHeader/profile.jpeg" alt="Student" />
                 </div>

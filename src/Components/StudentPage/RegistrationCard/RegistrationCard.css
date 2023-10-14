@@ -1,0 +1,38 @@
+.registration-card {
+    background-color: aliceblue;
+    margin: 3% 8%;
+    border-radius: 5px;
+    /* background-color: yellowgreen; */
+    padding-bottom: 10px;
+}
+.reg-card-bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 30%;
+}
+.reg-card-bottom-hr{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 25%;
+    margin-top: 30px;
+}
+.reg-card-bottom-hr hr{
+    width: 40%;
+    background-color: black;
+}
+.reg-card-bottom hr{
+    color: black;
+}
+.top-section h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 1.1srem;
+    /* background-color: aqua; */
+    margin: 0;
+}
+.top-section a{
+    position: relative;
+    left: 84%;
+    /* background-color: blueviolet; */
+}

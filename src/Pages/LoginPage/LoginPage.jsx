@@ -12,11 +12,6 @@ const LoginPage=()=>{
           <Header />
           <Main />
           <BottomSection />
-          <Footer />
-          {ReactDOM.createPortal(
-            <BackDrop />,
-            document.getElementById('back')
-          )}
         </React.Fragment>
     
       );

@@ -1,6 +1,6 @@
 
 .footerMain{
-    position: fixed;
+    position: -webkit-sticky;
     bottom: 0;
     left: 0;
     width: 100%;

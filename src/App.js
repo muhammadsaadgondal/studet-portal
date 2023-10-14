@@ -1,15 +1,26 @@
-import React, { useState } from "react";
-import Header from "./Components/Header/Header";
-import Main from "./Components/Main/Main";
-
+import React, { Fragment, useState } from "react";
+import ReactDOM from "react-dom";
 import LoginPage from "./Pages/LoginPage/LoginPage";
 import StudentPage from "./Pages/StudentPage/StudentPage";
-
+import Registration from "./Pages/Registration/Registration";
+import Footer from "./UI/Footer/Footer";
+import BackDrop from "./UI/BackDrop/BackDrop";
 
 function App() {
-  const [logedIn, setLogin] = useState(false);
+  const [loggedIn, setLogin] = useState(false); // Fixed the typo in variable name
 
-  return logedIn ? <LoginPage /> : <StudentPage />;
+  return (
+    <Fragment>
+      <Registration />
+      <Footer />
+      {
+        ReactDOM.createPortal(
+          <BackDrop />,
+          document.getElementById('back')
+        )
+      }
+    </Fragment>
+  );
 }
 
 export default App;
