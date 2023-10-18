@@ -7,7 +7,6 @@ import Table from "../../Components/StudentHeader/Table";
 
 const StudentPage = () => {
     return <Fragment>
-        <StudentHeader />
         <Table />
         {/* <Footer /> */}
         {ReactDOM.createPortal(

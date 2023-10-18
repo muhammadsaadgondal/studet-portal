@@ -4,7 +4,6 @@ import Profile from "../../Components/StudentPage/Profile/Profile";
 
 const ProfilePage=()=>{
     return <Fragment>
-        <StudentHeader />
         <Profile />
     </Fragment>
 }

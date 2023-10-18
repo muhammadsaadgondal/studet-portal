@@ -1,36 +1,59 @@
 import OptionTab from "./OptionTab";
 import classes from "./OptionBar.module.css";
+/* Context to update page */
+import { usePageContext } from "../../Context/PageContext";
 
 const barData = [{
     imgSrc: "./assets/images/StudentHeader/house.png",
-    text: "Dashboard"
+    text: "Dashboard",
+    active: false
 }, {
     imgSrc: "./assets/images/StudentHeader/reading.png",
-    text: "Reg Card"
+    text: "Reg Card",
+    active: false
 }, {
     imgSrc: "./assets/images/StudentHeader/money.png",
-    text: "Fees"
+    text: "Fees",
+    active: false
 }, {
     imgSrc: "./assets/images/StudentHeader/contact.png",
-    text: "Result Card"
+    text: "Result Card",
+    active: false
 }, {
     imgSrc: "./assets/images/StudentHeader/boy.png",
-    text: "Profile"
+    text: "Profile",
+    active: false
 }, {
     imgSrc: "./assets/images/StudentHeader/contact.png",
-    text: "Clearance"
+    text: "Clearance",
+    active: false
 }, {
     imgSrc: "./assets/images/StudentHeader/logout.png",
-    text: "Logout"
+    text: "Logout",
+    active: false
 }]
 
-const OptionBar = (props) => {
+const OptionBar = () => {
+
+    const { activePage, updateState } = usePageContext();
+
+    const updatedList = barData.map(dataUnit => {
+        if (dataUnit.text === activePage) {
+            // console.log("dsda");
+            return { ...dataUnit, active: true };
+        }
+        return dataUnit;
+    })
+
     return (
         <div className={classes.info}>
-            {barData.map(tab => (
+            {updatedList.map(tab => (
                 <OptionTab
+                    key={tab.text}
+                    updateState={updateState}
                     imgSrc={tab.imgSrc}
                     text={tab.text}
+                    active={tab.active}
                 />
             ))}
         </div>

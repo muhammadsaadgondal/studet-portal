@@ -20,7 +20,8 @@ const textWithLinks = [
     { text: "loehdbjsbd", type: "text" },
 ];
 
-const NoticeList = () => {
+const 
+NoticeList = () => {
     return (
         <ul className="all-list">
             <h1>NOTICEBOARD</h1>

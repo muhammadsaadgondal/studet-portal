@@ -12,9 +12,9 @@ const debounce = (func, delay) => {
     };
 };
 
-const StudentHeader = () => {
+const StudentHeader = (props) => {
     const [tabIsOpen, setTabIsOpen] = useState(true);
-
+    // console.log(props.activePage);
     const updateWindowWidth = () => {
         if (window.innerWidth <= 990) {
             // console.log("Goori");
