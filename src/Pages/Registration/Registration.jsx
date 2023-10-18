@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import StudentHeader from "../../Components/StudentPage/StudentHeader/StudentHeader";
+import StudentHeader from "../../Components/StudentHeader/StudentHeader";
 import RegistrationCard from "../../Components/StudentPage/RegistrationCard/RegistrationCard";
 
 

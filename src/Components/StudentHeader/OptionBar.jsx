@@ -1,5 +1,5 @@
 import OptionTab from "./OptionTab";
-
+import classes from "./OptionBar.module.css";
 
 const barData = [{
     imgSrc: "./assets/images/StudentHeader/house.png",
@@ -26,7 +26,7 @@ const barData = [{
 
 const OptionBar = (props) => {
     return (
-        <div className="info">
+        <div className={classes.info}>
             {barData.map(tab => (
                 <OptionTab
                     imgSrc={tab.imgSrc}

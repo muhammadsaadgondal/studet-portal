@@ -1,8 +1,8 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import './StudentHeader.css';
 import OptionBar from './OptionBar';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import ToggleButton from './ToggleButton';
+
 
 const debounce = (func, delay) => {
     let timeout;
@@ -46,9 +46,7 @@ const StudentHeader = () => {
                 {tabIsOpen ?
                     <OptionBar />
                     :
-                    <button className='toggle-button'>
-                        <FontAwesomeIcon icon={faBars} style={{color: "#ffffff",}} />
-                    </button>
+                    <ToggleButton />
                 }
                 <div className="student-image">
                     <img src="./assets/images/StudentHeader/profile.jpeg" alt="Student" />

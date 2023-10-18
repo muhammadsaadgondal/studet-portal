@@ -1,16 +1,14 @@
 .info-item {
-  width: calc(13.66%);
+  width: calc(16.66%);
   border-radius: 5px;
   height:  50px;
   background-color: aliceblue;
   display: flex;
-  /* Added to center content vertically */
   flex-direction: column;
-  /* Added to stack image and text vertically */
   align-items: center;
-  /* Center content horizontally */
   padding-top: 10px;
   margin: 5px;
+  flex-wrap: nowrap;
 }
 
 .info-item img {
@@ -31,13 +29,14 @@
     font-size: x-small;
   }
 
-  .info-item {
+  /* .info-item {
     width: calc(16.66%);
-  }
+  } */
 }
 
 @media screen and (max-width:990px){
   .info-item {
     
+  /* width: calc(20.66%); */
   }
 }

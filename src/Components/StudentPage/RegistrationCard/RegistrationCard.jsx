@@ -1,7 +1,7 @@
 import React from 'react';
 import StudentDetailRow from './StudentDetailRow';
 import "./RegistrationCard.css";
-import Table from '../StudentHeader/Table';
+import Table from '../../StudentHeader/Table';
 import RegistrationTable from './RegistrationTable';
 
 const RegistrationCard = () => {

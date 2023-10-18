@@ -1,17 +1,15 @@
 import React, { Fragment, useState } from "react";
 import ReactDOM from "react-dom";
-import LoginPage from "./Pages/LoginPage/LoginPage";
-import StudentPage from "./Pages/StudentPage/StudentPage";
-import Registration from "./Pages/Registration/Registration";
 import Footer from "./UI/Footer/Footer";
 import BackDrop from "./UI/BackDrop/BackDrop";
+import CondRender from "./Pages/CondRender/CondRender";
 
 function App() {
   const [loggedIn, setLogin] = useState(false); // Fixed the typo in variable name
 
   return (
     <Fragment>
-      <Registration />
+      <CondRender />
       <Footer />
       {
         ReactDOM.createPortal(
