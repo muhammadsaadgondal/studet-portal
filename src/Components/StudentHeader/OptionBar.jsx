@@ -2,6 +2,7 @@ import OptionTab from "./OptionTab";
 import classes from "./OptionBar.module.css";
 /* Context to update page */
 import { usePageContext } from "../../Context/PageContext";
+import { useLoginContext } from "../../Context/LoginContext";
 
 const barData = [{
     imgSrc: "./assets/images/StudentHeader/house.png",
@@ -36,10 +37,13 @@ const barData = [{
 const OptionBar = () => {
 
     const { activePage, updateState } = usePageContext();
+    const { logout } = useLoginContext();
 
     const updatedList = barData.map(dataUnit => {
         if (dataUnit.text === activePage) {
-            // console.log("dsda");
+            if (activePage === "Logout") {
+                logout();
+            }
             return { ...dataUnit, active: true };
         }
         return dataUnit;

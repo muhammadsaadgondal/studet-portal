@@ -1,23 +1,33 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import Footer from "./UI/Footer/Footer";
 import BackDrop from "./UI/BackDrop/BackDrop";
 import CondRender from "./Pages/CondRender/CondRender";
 import StudentHeader from "./Components/StudentHeader/StudentHeader";
+import LoginPage from "./Pages/LoginPage/LoginPage";
 /* Context to update page */
-import { useContext } from 'react';
-import { usePageContext } from "./Context/PageContext"; 
+import { usePageContext } from "./Context/PageContext";
+import {  useLoginContext } from "./Context/LoginContext";
 
 function App() {
-  const [loggedIn, setLogin] = useState(false); // Fixed the typo in variable name
+  const { loggedIn } = useLoginContext();
+  const { activePage, updateState } = usePageContext();
 
-  const { activePage, updateState } = usePageContext(); 
-
+  useEffect(() => {
+    console.log("I'm insude useEffect with value :", loggedIn);
+  }, [loggedIn]);
 
   return (
     <Fragment>
-      <StudentHeader  />
-      <CondRender activePage={activePage} updateState={updateState} />
+      {loggedIn === true ?
+        <div>
+          <StudentHeader />
+          <CondRender activePage={activePage} updateState={updateState} />
+        </div>
+        :
+        <LoginPage />
+      }
+
       <Footer />
       {
         ReactDOM.createPortal(

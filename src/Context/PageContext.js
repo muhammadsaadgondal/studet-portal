@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useReducer, useState } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
 const PageContext = createContext({
     activePage: 'Dashboard', // Default value

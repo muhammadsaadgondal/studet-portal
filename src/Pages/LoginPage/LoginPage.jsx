@@ -6,15 +6,16 @@ import Main from "../../Components/Main/Main";
 import ReactDOM from "react-dom";
 import React from "react";
 
-const LoginPage=()=>{
-    return (
-        <React.Fragment>
-          <Header />
-          <Main />
-          <BottomSection />
-        </React.Fragment>
-    
-      );
+const LoginPage = () => {
+  // console.log("Inside the login page bela waja");
+  return (
+    <React.Fragment>
+      <Header />
+      <Main />
+      <BottomSection />
+    </React.Fragment>
+
+  );
 }
 
 export default LoginPage;
