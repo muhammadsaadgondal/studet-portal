@@ -6,23 +6,22 @@ import CondRender from "./Pages/CondRender/CondRender";
 import StudentHeader from "./Components/StudentHeader/StudentHeader";
 import LoginPage from "./Pages/LoginPage/LoginPage";
 /* Context to update page */
-import { usePageContext } from "./Context/PageContext";
-import {  useLoginContext } from "./Context/LoginContext";
+import { useLoginContext } from "./Context/LoginContext";
 
 function App() {
   const { loggedIn } = useLoginContext();
-  const { activePage, updateState } = usePageContext();
 
   useEffect(() => {
-    console.log("I'm insude useEffect with value :", loggedIn);
   }, [loggedIn]);
 
   return (
     <Fragment>
       {loggedIn === true ?
+
         <div>
+          
           <StudentHeader />
-          <CondRender activePage={activePage} updateState={updateState} />
+          <CondRender />
         </div>
         :
         <LoginPage />

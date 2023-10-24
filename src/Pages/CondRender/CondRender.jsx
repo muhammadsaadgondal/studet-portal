@@ -2,18 +2,16 @@ import React from "react";
 import StudentPage from "../StudentPage/StudentPage";
 import ProfilePage from "../ProfilePage/ProfilePage";
 import Registration from "../Registration/Registration";
+import { usePageContext } from "../../Context/PageContext";
 
-const CondRender = (props) => {
-  const [pageName, setPageName] = React.useReducer((state, action) => {
-    return action;
-  }, props.activePage);
-
+const CondRender = () => {
+  const { activePage, updateState } = usePageContext();
+ 
   React.useEffect(() => {
-    setPageName(props.activePage);
-    // props.updateState(pageName);
-  }, [pageName,props]);
+    updateState(activePage);
+  }, [activePage]);
 
-  switch (pageName) {
+  switch (activePage) {
     case "Dashboard":
       return <StudentPage />;
     case "Profile":

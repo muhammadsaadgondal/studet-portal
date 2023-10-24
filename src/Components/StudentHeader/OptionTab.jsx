@@ -7,7 +7,11 @@ const OptionTab = (props) => {
 
     const updating = () => {
         props.updateState(props.text);
+        if (props.text === "Logout") {
+            props.logoutUser();
+        }
     }
+
     return (
         <a onClick={updating} className={classNames}>
             <img src={props.imgSrc} alt="Image 2" />

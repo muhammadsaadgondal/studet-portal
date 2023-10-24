@@ -1,9 +1,9 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 
 const LoginContext = createContext({
   loggedIn: false,
-  login: () => {},
-  logout: () => {},
+  login: () => { },
+  logout: () => { },
 });
 
 export const useLoginContext = () => {
@@ -15,8 +15,11 @@ export const LoginContextProvider = ({ children }) => {
 
   const login = () => {
     setLoggedIn(true);
-    // console.log("Setting it to true");
   };
+
+  useEffect(() => {
+    
+  }, [loggedIn]);
 
   const logout = () => {
     setLoggedIn(false);
