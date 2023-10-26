@@ -20,8 +20,8 @@ const Login = () => {
     return (
         <div className={classes["main-container"]}>
             <form onSubmit={submitHandler}>
-                <button className={`${classes.btn} ${classes.btn1}`} >By Roll No</button>
-                <button className={`${classes.btn} ${classes.btn2}`} >By List</button>
+                <button onClick={() => { }} className={`${classes.btn} ${classes.btn1}`} >By Roll No</button>
+                <button onClick={() => { }} className={`${classes.btn} ${classes.btn2}`} >By List</button>
                 <RollNumberInput />
                 <input
                     className={classes.pswd}

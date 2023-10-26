@@ -12,6 +12,11 @@
     margin-bottom: 100px;
 }
 
+.rowItem:hover {
+    background-color: #f0f0f0; 
+    cursor: pointer; 
+  }
+
 .table-container h2 {
     background-color: rgb(103, 205, 171);
     color: white;

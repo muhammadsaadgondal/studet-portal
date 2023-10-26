@@ -9,10 +9,10 @@ const StudentPage = () => {
     return <Fragment>
         <Table />
         {/* <Footer /> */}
-        {ReactDOM.createPortal(
-            <BackDrop />,
+        {/* {ReactDOM.createPortal( */}
+            {/* <BackDrop />, */}
             document.getElementById('back')
-        )}
+        {/* )} */}
     </Fragment>
 }
 
