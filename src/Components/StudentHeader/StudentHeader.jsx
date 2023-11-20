@@ -39,7 +39,7 @@ const StudentHeader = (props) => {
 
     return (
         <Fragment>
-            <div className="student-header">
+            <nav className="student-header">
                 <div className="logo">
                     <img src="./assets/images/logo_with_text.png" alt="Logo" />
                 </div>
@@ -51,7 +51,7 @@ const StudentHeader = (props) => {
                 <div className="student-image">
                     <img src="./assets/images/StudentHeader/profile.jpeg" alt="Student" />
                 </div>
-            </div>
+            </nav>
         </Fragment>
 
     );

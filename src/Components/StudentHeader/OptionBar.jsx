@@ -7,11 +7,11 @@ import { useState } from "react";
 
 const barData = [{
     imgSrc: "./assets/images/StudentHeader/house.png",
-    text: "Dashboard",
+    text: "dashboard",
     active: false
 }, {
     imgSrc: "./assets/images/StudentHeader/reading.png",
-    text: "Reg Card",
+    text: "registration",
     active: false
 }, {
     imgSrc: "./assets/images/StudentHeader/money.png",
@@ -23,7 +23,7 @@ const barData = [{
     active: false
 }, {
     imgSrc: "./assets/images/StudentHeader/boy.png",
-    text: "Profile",
+    text: "profile",
     active: false
 }, {
     imgSrc: "./assets/images/StudentHeader/contact.png",

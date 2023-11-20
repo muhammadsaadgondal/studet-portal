@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import classes from "./OptionTab.module.css";
 
 
@@ -14,10 +15,11 @@ const OptionTab = (props) => {
     }
 
     return (
-        <a onClick={updating} className={classNames}>
+        <Link onClick={updating} className={classNames} to={props.text != "Logout" ? `/${props.text}` : "/"}>
             <img src={props.imgSrc} alt="Image 2" />
             <p>{props.text}</p>
-        </a>
+
+        </Link>
     );
 }
 

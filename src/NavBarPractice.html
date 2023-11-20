@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav-item {
+            background-color: darksalmon;
+            display: inline-block;
+            /* float: left; */
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .navbar {
+            float: right;
+        }
+
+        .icon {
+            display: none;
+        }
+
+        @media screen and (max-width:600px) {
+            .navbar a:not(:first-child) {
+                display: none;
+            }
+
+            .navbar a.icon {
+                display: block;
+                float: right;
+                /* position: top; */
+            }
+
+            
+        }
+
+        @media screen and (max-width:600px) {
+            .navbar.responsive {
+                position: relative;
+            }
+        }
+
+        .navbar.responsive .icon {
+            position: absolute;
+            background-color: red;
+            /* height: 100px; */
+            right: 0;
+            top: 0;
+        }
+
+        .navbar.responsive a {
+            float: none;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" id="topbar">
+        <a class="nav-item">Home</a>
+        <a class="nav-item">Contact</a>
+        <a class="nav-item">Features</a>
+        <a class="nav-item">Dashboard</a>
+        <a  class="icon" onclick="myFunction()">
+            <button class="fa fa-bars">Toggle</button>
+        </a>
+    </nav>
+</body>
+<script>
+    const myFunction = () => {
+        var x = document.getElementById('topbar');
+        if (x.className == "navbar") {
+            x.className += " responsive";
+        }
+        else {
+            x.className = "navbar";
+        }
+    }
+</script>
+
+</html>
