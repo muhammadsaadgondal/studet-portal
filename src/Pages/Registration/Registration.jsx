@@ -6,6 +6,7 @@ import RegistrationCard from "../../Components/StudentPage/RegistrationCard/Regi
 const Registration = () => {
 
     return <Fragment>
+        <StudentHeader />
         <RegistrationCard />
     </Fragment>
 }

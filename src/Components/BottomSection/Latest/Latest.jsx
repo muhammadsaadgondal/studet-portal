@@ -10,12 +10,12 @@ const latestObject = [{
     title: "COMSATS",
     description: "COMSATS University Islamabad Intro,duction.",
     thumbnailURL: "https://youtu.be/bAM0YkNLf7M",
-    url:"https://www.youtube.com/watch?v=tONNlv6osG4&list=PL5cz44VCrscVrzSJ9ptlybpWyKdIypvPj"
+    url: "https://www.youtube.com/watch?v=tONNlv6osG4&list=PL5cz44VCrscVrzSJ9ptlybpWyKdIypvPj"
 }, {
     title: "NEWS",
     description: "Eagle Eye With Moazam Shahbaz, 20 Oct 2019",
     thumbnailURL: "https://youtu.be/bAM0YkNLf7M",
-    url:"https://www.youtube.com/watch?v=_oio2uZAuaM"
+    url: "https://www.youtube.com/watch?v=_oio2uZAuaM"
 }]
 
 const Latest = () => {
@@ -24,7 +24,8 @@ const Latest = () => {
         <hr />
         <div className={classes.container}>
             {latestObject.map((obj) => (
-                <VideoBox currObj={obj} />
+                <VideoBox currObj={obj}
+                />
             ))}
         </div>
 
