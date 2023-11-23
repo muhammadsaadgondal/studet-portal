@@ -12,51 +12,13 @@ import Registration from "./Pages/Registration/Registration";
 import ProfilePage from "./Pages/ProfilePage/ProfilePage";
 import NoPage from "./Pages/NoPage/NoPage";
 /* FIREBASE DATABASE  */
-import database from "./services/firebase";
-import { ref, get, set, push } from 'firebase/database';
+import datafetch from "./services/dataFetch";
 
 function App() {
   const { loggedIn } = useLoginContext();
-  /* To FireBase Data */
-  const [data, setData] = useState(null);
+  console.log(datafetch);
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        // Reference to the 'students' node in your database
-        const dbRef = ref(database, 'students');
-
-        // Fetch data
-        const snapshot = await get(dbRef);
-
-        // Handle the data
-        if (snapshot.exists()) {
-          setData(snapshot.name);
-          console.log('Data exists:', snapshot.val());
-        } else {
-          console.log('No data available');
-
-          const studentKey = push(dbRef).key;
-
-          await push(dbRef, {
-
-            name: 'Muhammad Saad Gondal',
-            fName: "Muhammad Pervaiz",
-            reg: 'fa21-bcs-035',
-            contact: '0320-1054643',
-            nationality: 'Pakistani',
-            dob: '08-02-2002',
-            email: 'saadgondal203@gmail.com'
-
-          }
-          );
-        }
-      } catch (error) {
-        console.log("REal");
-        console.error('Error fetching data:', error);
-      }
-    };
-
-    fetchData();
+    
   }, [loggedIn]);
   return (
 
