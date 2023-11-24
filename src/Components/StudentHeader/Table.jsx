@@ -50,7 +50,7 @@ const TableRow = ({ data }) => (
 );
 
 
-const Table = () => {
+const Table = (props) => {
     const tableData = [
         ['Course ID', 'Course Name', 'Instructor', 'Credit Hours', 'Location', 'Attendance'],
         ['101', 'Mathematics', 'Prof. Smith', '3', 'Room 201', '87'],

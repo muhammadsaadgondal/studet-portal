@@ -7,7 +7,7 @@ import ReactDOM from "react-dom";
 import React from "react";
 
 const LoginPage = () => {
-  // console.log("Inside the login page bela waja");
+    
   return (
     <React.Fragment>
       <Header />

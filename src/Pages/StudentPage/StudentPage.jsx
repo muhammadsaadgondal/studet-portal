@@ -9,10 +9,9 @@ const StudentPage = () => {
     const data = datafetch;
     
 
-
     return <Fragment>
         <StudentHeader />
-        <Table />
+        <Table data={data}/>
     </Fragment>
 }
 

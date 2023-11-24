@@ -1,6 +1,6 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useEffect, useReducer, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
+x
 import ReactDOM from "react-dom";
 import Footer from "./UI/Footer/Footer";
 import BackDrop from "./UI/BackDrop/BackDrop";
@@ -14,11 +14,27 @@ import NoPage from "./Pages/NoPage/NoPage";
 /* FIREBASE DATABASE  */
 import datafetch from "./services/dataFetch";
 
+
 function App() {
   const { loggedIn } = useLoginContext();
-  console.log(datafetch);
   useEffect(() => {
-    
+    const fetchData = async () => {
+      try {
+        const data = await datafetch();
+        // console.log(data);
+
+        // Now you can iterate over the data
+        for (let item in data) {
+          console.log(data[item].reg);
+          // console.log("Here");
+        }
+      } catch (error) {
+        // Handle errors here
+        console.error('Error in fetchData:', error);
+      }
+    };
+
+    fetchData();
   }, [loggedIn]);
   return (
 
@@ -28,7 +44,11 @@ function App() {
         document.getElementById('back')
       )}
       <Routes>
-        <Route path="/" element={loggedIn ? <StudentPage /> : <LoginPage />} />
+        <Route path="/"
+          element={loggedIn ?
+            <StudentPage /> :
+            <LoginPage />
+          } />
         <Route path="dashboard" element={<StudentPage />} />
         <Route path="registration" element={<Registration />} />
         <Route path="profile" element={<ProfilePage />} />
