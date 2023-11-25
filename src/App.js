@@ -1,6 +1,5 @@
 import React, { Fragment, useEffect, useReducer, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-x
 import ReactDOM from "react-dom";
 import Footer from "./UI/Footer/Footer";
 import BackDrop from "./UI/BackDrop/BackDrop";
@@ -34,7 +33,7 @@ function App() {
       }
     };
 
-    fetchData();
+    // fetchData();
   }, [loggedIn]);
   return (
 

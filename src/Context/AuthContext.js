@@ -1,0 +1,71 @@
+import React, { useContext, useEffect, useState } from "react";
+import context from "react-bootstrap/esm/AccordionContext"
+import { getAuth } from 'firebase/auth';
+/* FIREBASE DATABASE  */
+import datafetch from "../services/dataFetch";
+
+const auth = getAuth();
+const AuthContext = React.createContext({
+    currentUser: {},
+    login: () => { console.log("Same old shit");}
+});
+
+export const useAuthContext = () => {
+    return useContext(AuthContext);
+}
+
+
+const fetchData = (reg,password) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            const data = await datafetch();
+            console.log(data);
+            // Now you can iterate over the data
+            for (let item in data) {
+                console.log(data[item]);
+                if (data[item].reg === reg && data[item].pwd === password) {
+                    return data[item];
+                }
+            }
+            return null;
+        } catch (error) {
+            // Handle errors here
+            console.error('Error in fetchData:', error);
+        }
+    });
+};
+
+export const AuthContextProvider = ({ children }) => {
+    const [currentUser, setCurrentUser] = useState();
+
+    const customLogin = async (reg, password) => {
+        try {
+            console.log("Idr to ya ha");
+            const userData = await fetchData(reg,password);
+            console.log(`Here it is ${userData}`);
+            // if (userData !== null) {
+            //     await auth.signInWithEmailAndPassword(reg, password);
+            // }
+            // Wait for the authentication to complete before updating currentUser
+            const user = auth.currentUser; // Use currentUser instead of auth.reg
+            setCurrentUser(user);
+        } catch (error) {
+            // Handle login errors
+            console.error("Error during login:", error.message);
+        }
+    };
+
+    useEffect(() => {
+        const unsubscribe = auth.onAuthStateChanged(user => {
+            setCurrentUser(user);
+        })
+        return unsubscribe;
+    }, [])
+
+    const valuex = {
+        currentUser,
+        login: customLogin, // Use the custom login function
+    };
+
+    return <AuthContext.Provider value={{ currentUser, login:customLogin }}>{children}</AuthContext.Provider>;
+};

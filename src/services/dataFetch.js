@@ -1,15 +1,9 @@
-import database from "./firebase";
+import { database } from './firebase';
 import { ref, get } from 'firebase/database';
-import jwt from 'jsonwebtoken';
 
-const datafetch = async (token) => {
+const datafetch = async () => {
     try {
-        // Verify the token to get user information
-        const decodedToken = jwt.verify(token, 'yourSecretKey'); // Replace with your actual secret key
-        const userId = decodedToken.id;
-
-        // Reference to the 'students' node in your database
-        const dbRef = ref(database, `students/${userId}`); // Assuming you store user-specific data under the 'users' node
+        const dbRef = ref(database, `students`); // Assuming you store user-specific data under the 'users' node
 
         // Fetch data
         const snapshot = await get(dbRef);

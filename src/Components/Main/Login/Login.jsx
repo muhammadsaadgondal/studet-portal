@@ -1,60 +1,47 @@
-import React, { useState, useEffect } from "react";
-import RollNumberInput from "./RollNumberInput";
+import React, { useState } from "react";
 import classes from "./Login.module.css";
 import Captcha from "./Captcha/Captcha";
 import { useLoginContext } from "../../../Context/LoginContext";
 import { usePageContext } from "../../../Context/PageContext";
+import { useAuthContext } from "../../../Context/AuthContext"; // Update the path accordingly
 
 const Login = () => {
-    const { loggedIn, setLoggedIn } = useLoginContext();
-    const { activePage, updateState } = usePageContext();
+    const { setLoggedIn,login: Loggingin } = useLoginContext();
+    const { updateState } = usePageContext();
+    const { currentUser, login } = useAuthContext();
 
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [reg, setReg] = useState('fa21-bcs-032');
+    const [password, setPassword] = useState('examplw223');
 
     const submitHandler = async (event) => {
         event.preventDefault();
 
         try {
-            const response = await fetch('http://your-server-url/api/auth/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ email, password }),
-            });
+            // Call the login function from the AuthContext
+            /* await */ login(reg, password);
 
-            if (response.ok) {
-                const { token } = await response.json();
-                // Assuming your authController sends back a JWT token
-                // Store the token in localStorage or another secure storage method
-                localStorage.setItem('token', token);
+            console.log(`Hui Hui welcome :${currentUser}`);
+            // Update the loggedIn state in your React context
+            Loggingin();
 
-                // Update the loggedIn state in your React context
-                setLoggedIn(true);
-
-                // Redirect to the dashboard or another page
-                updateState("Dashboard");
-            } else {
-                console.error('Login failed');
-            }
+            // Redirect to the dashboard or another page
+            updateState("Dashboard");
         } catch (error) {
-            console.error('Error during login:', error);
+            console.error('Error signing in:', error.message);
         }
-    }
+    };
 
     return (
         <div className={classes["main-container"]}>
             <form onSubmit={submitHandler}>
                 <button onClick={() => { }} className={`${classes.btn} ${classes.btn1}`} >By Roll No</button>
                 <button onClick={() => { }} className={`${classes.btn} ${classes.btn2}`} >By List</button>
-                <RollNumberInput />
                 <input
-                    className={classes.email}
-                    type="email"
-                    placeholder="Email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    className={classes.text}
+                    type="text"
+                    placeholder="Registration No"
+                    value={reg}
+                    onChange={(e) => setReg(e.target.value)}
                 ></input>
                 <input
                     className={classes.pswd}
