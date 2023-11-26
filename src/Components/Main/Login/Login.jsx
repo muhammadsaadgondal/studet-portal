@@ -6,26 +6,30 @@ import { usePageContext } from "../../../Context/PageContext";
 import { useAuthContext } from "../../../Context/AuthContext"; // Update the path accordingly
 
 const Login = () => {
-    const { setLoggedIn,login: Loggingin } = useLoginContext();
+    const {  login: Loggingin } = useLoginContext();
     const { updateState } = usePageContext();
     const { currentUser, login } = useAuthContext();
 
-    const [reg, setReg] = useState('fa21-bcs-032');
-    const [password, setPassword] = useState('examplw223');
+    const [reg, setReg] = useState('fa21-bcs-035');
+    const [password, setPassword] = useState('saadstar1');
 
     const submitHandler = async (event) => {
         event.preventDefault();
 
         try {
             // Call the login function from the AuthContext
-            /* await */ login(reg, password);
+            const tempUser = await login(reg, password);
 
-            console.log(`Hui Hui welcome :${currentUser}`);
-            // Update the loggedIn state in your React context
-            Loggingin();
-
-            // Redirect to the dashboard or another page
-            updateState("Dashboard");
+            if (tempUser != null) {
+                console.log(`Hui Hui welcome :${tempUser.name} plus ${currentUser}`);
+                Loggingin();
+                // Redirect to the dashboard or another page
+                updateState("Dashboard");
+            }
+            else{
+                setReg("");
+                setPassword("")
+            }
         } catch (error) {
             console.error('Error signing in:', error.message);
         }

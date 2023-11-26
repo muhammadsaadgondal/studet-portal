@@ -7,6 +7,7 @@ import datafetch from "../../services/dataFetch";
 const StudentPage = () => {
     /* for FireBase Data */
     const data = datafetch;
+    console.log(data);
     
 
     return <Fragment>

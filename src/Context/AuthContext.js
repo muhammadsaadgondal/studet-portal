@@ -15,7 +15,7 @@ export const useAuthContext = () => {
 }
 
 
-const fetchData = async(reg, password) => {
+const fetchData = async (reg, password) => {
 
     try {
         const data = await datafetch();
@@ -43,14 +43,19 @@ export const AuthContextProvider = ({ children }) => {
         try {
             console.log("Idr to ya ha");
             const userData = await fetchData(reg, password);
-            console.log(userData);
-            console.log(`Here it is ${userData.name}`);
-            // if (userData !== null) {
-            //     await auth.signInWithEmailAndPassword(reg, password);
-            // }
-            // Wait for the authentication to complete before updating currentUser
-            const user = userData; // Use currentUser instead of auth.reg
-            setCurrentUser(user);
+            if (userData != null) {
+                console.log(userData);
+                console.log(`Here it is ${userData.name}`);
+                // if (userData !== null) {
+                //     await auth.signInWithEmailAndPassword(reg, password);
+                // }
+/* Msla ha user state updation ont workig */
+                await setCurrentUser(userData);
+                
+            }
+            console.log(`Checking the state updation ${currentUser}`);
+            return userData;
+
         } catch (error) {
             // Handle login errors
             console.error("Error during login:", error.message);
@@ -64,10 +69,6 @@ export const AuthContextProvider = ({ children }) => {
         return unsubscribe;
     }, [])
 
-    const valuex = {
-        currentUser,
-        login: customLogin, // Use the custom login function
-    };
 
     return <AuthContext.Provider value={{ currentUser, login: customLogin }}>{children}</AuthContext.Provider>;
 };
