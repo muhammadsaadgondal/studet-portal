@@ -7,7 +7,7 @@ import datafetch from "../services/dataFetch";
 const auth = getAuth();
 const AuthContext = React.createContext({
     currentUser: {},
-    login: () => { console.log("Same old shit");}
+    login: () => { console.log("Same old shit"); }
 });
 
 export const useAuthContext = () => {
@@ -15,24 +15,25 @@ export const useAuthContext = () => {
 }
 
 
-const fetchData = (reg,password) => {
-    return new Promise(async (resolve, reject) => {
-        try {
-            const data = await datafetch();
-            console.log(data);
-            // Now you can iterate over the data
-            for (let item in data) {
-                console.log(data[item]);
-                if (data[item].reg === reg && data[item].pwd === password) {
-                    return data[item];
-                }
+const fetchData = async(reg, password) => {
+
+    try {
+        const data = await datafetch();
+        console.log(data);
+        // Now you can iterate over the data
+        for (let item in data) {
+            console.log(data[item].pwd);
+            if (data[item].reg === reg && data[item].pwd === password) {
+                console.log("True ha vro");
+                return data[item];
             }
-            return null;
-        } catch (error) {
-            // Handle errors here
-            console.error('Error in fetchData:', error);
         }
-    });
+        return null;
+    } catch (error) {
+        // Handle errors here
+        console.error('Error in fetchData:', error);
+    }
+
 };
 
 export const AuthContextProvider = ({ children }) => {
@@ -41,13 +42,14 @@ export const AuthContextProvider = ({ children }) => {
     const customLogin = async (reg, password) => {
         try {
             console.log("Idr to ya ha");
-            const userData = await fetchData(reg,password);
-            console.log(`Here it is ${userData}`);
+            const userData = await fetchData(reg, password);
+            console.log(userData);
+            console.log(`Here it is ${userData.name}`);
             // if (userData !== null) {
             //     await auth.signInWithEmailAndPassword(reg, password);
             // }
             // Wait for the authentication to complete before updating currentUser
-            const user = auth.currentUser; // Use currentUser instead of auth.reg
+            const user = userData; // Use currentUser instead of auth.reg
             setCurrentUser(user);
         } catch (error) {
             // Handle login errors
@@ -67,5 +69,5 @@ export const AuthContextProvider = ({ children }) => {
         login: customLogin, // Use the custom login function
     };
 
-    return <AuthContext.Provider value={{ currentUser, login:customLogin }}>{children}</AuthContext.Provider>;
+    return <AuthContext.Provider value={{ currentUser, login: customLogin }}>{children}</AuthContext.Provider>;
 };
