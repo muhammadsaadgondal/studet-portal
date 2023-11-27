@@ -45,15 +45,16 @@ export const AuthContextProvider = ({ children }) => {
             const userData = await fetchData(reg, password);
             if (userData != null) {
                 console.log(userData);
-                console.log(`Here it is ${userData.name}`);
+                // console.log(`Here it is ${userData.name}`);
                 // if (userData !== null) {
                 //     await auth.signInWithEmailAndPassword(reg, password);
                 // }
-/* Msla ha user state updation ont workig */
-                await setCurrentUser(userData);
-                
+                /* Msla ha user state updation ont workig */
+
+                setCurrentUser(userData);
+                // const tempUser=userData;
             }
-            console.log(`Checking the state updation ${currentUser}`);
+            // console.log(`Checking the state updation ${currentUser.name}`);
             return userData;
 
         } catch (error) {
