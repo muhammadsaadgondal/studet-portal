@@ -28,7 +28,7 @@ height: 2px;
 .profile-info{
     display: flex;
     margin: 5px;
-    background-color: violet;
+    /* background-color: violet; */
     min-width: 300px;
     /* padding-top: -30px; */
     /* height: 25px; */

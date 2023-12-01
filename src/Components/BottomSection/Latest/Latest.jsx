@@ -23,8 +23,8 @@ const Latest = () => {
         <h2>Latest</h2>
         <hr />
         <div className={classes.container}>
-            {latestObject.map((obj) => (
-                <VideoBox currObj={obj}
+            {latestObject.map((obj,index) => (
+                <VideoBox key={index} currObj={obj}
                 />
             ))}
         </div>

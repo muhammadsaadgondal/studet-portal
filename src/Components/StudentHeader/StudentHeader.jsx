@@ -17,7 +17,7 @@ const StudentHeader = (props) => {
                 </div>
                     <OptionBar />
                 <div className="student-image">
-                    <img src="./assets/images/StudentHeader/profile.jpeg" alt="Student" />
+                    <img src={props.profileUrl} alt="Student" />
                 </div>
             </nav>
         </Fragment>

@@ -3,16 +3,21 @@ import StudentDetailRow from './StudentDetailRow';
 import "./RegistrationCard.css";
 import Table from '../../StudentHeader/Table';
 import RegistrationTable from './RegistrationTable';
+import { useAuthContext } from '../../../Context/AuthContext';
 
 const RegistrationCard = () => {
+    
+    const { currentUser } = useAuthContext();
+    const cleanedCoursesString = currentUser.courses.replace(/'/g, '"');
+    const coursesArray = JSON.parse(cleanedCoursesString);
     // Define sample student data
     const studentData = {
-        name: 'Muhammad Saad Gondal',
-        registrationNo: 'FA21-BCS-035',
-        program: 'Computer Science',
-        session: '2023',
-        courses: '5',
-        campus: 'ISB',
+        name: currentUser.name,
+        registrationNo: currentUser.reg,
+        program: currentUser.program,
+        session: currentUser.session,
+        courses: coursesArray.length-1,
+        campus: currentUser.campus,
     };
 
     // Function to handle printing the card
@@ -45,7 +50,7 @@ const RegistrationCard = () => {
                     title2="Campus :"
                     title2Text={studentData.campus}
                 />
-                <RegistrationTable />
+                <RegistrationTable data={coursesArray}/>
             </div>
             <div >
                 <div className='reg-card-bottom-hr'>

@@ -17,22 +17,6 @@ import datafetch from "./services/dataFetch";
 function App() {
   const { loggedIn } = useLoginContext();
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await datafetch();
-        // console.log(data);
-
-        // Now you can iterate over the data
-        for (let item in data) {
-          console.log(data[item].reg);
-          // console.log("Here");
-        }
-      } catch (error) {
-        // Handle errors here
-        console.error('Error in fetchData:', error);
-      }
-    };
-
     // fetchData();
   }, [loggedIn]);
   return (

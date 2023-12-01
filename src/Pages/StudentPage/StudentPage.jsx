@@ -2,17 +2,15 @@ import { Fragment } from "react";
 import ReactDOM from "react-dom";
 import StudentHeader from "../../Components/StudentHeader/StudentHeader";
 import Table from "../../Components/StudentHeader/Table";
-import datafetch from "../../services/dataFetch";
+import { useAuthContext } from "../../Context/AuthContext"; // Update the path accordingly
+
 
 const StudentPage = () => {
-    /* for FireBase Data */
-    const data = datafetch;
-    console.log(data);
-    
+    const { currentUser } = useAuthContext();
 
     return <Fragment>
-        <StudentHeader />
-        <Table data={data}/>
+        <StudentHeader profileUrl={currentUser.imgUrl} />
+        <Table data={currentUser.courses} />
     </Fragment>
 }
 

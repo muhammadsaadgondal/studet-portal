@@ -51,14 +51,16 @@ const TableRow = ({ data }) => (
 
 
 const Table = (props) => {
-    const tableData = [
-        ['Course ID', 'Course Name', 'Instructor', 'Credit Hours', 'Location', 'Attendance'],
-        ['101', 'Mathematics', 'Prof. Smith', '3', 'Room 201', '87'],
-        ['102', 'History', 'Dr. Johnson', '4', 'Room 304', '90'],
-        ['103', 'Biology', 'Dr. White', '3', 'Room 102', '50'],
-        ['104', 'Physics', 'Prof. Brown', '3', 'Room 205', '79'],
-        ['105', 'Chemistry', 'Dr. Adams', '4', 'Room 301', '87'],
-    ];
+    
+    /* Since data obtained is considering courses as a string we need to parse it to arrays structure */
+    const coursesString = props.data;
+    // console.log(props.data);
+    const cleanedCoursesString = coursesString.replace(/'/g, '"');
+    const coursesArray = JSON.parse(cleanedCoursesString);
+
+    const tableData = coursesArray;
+    console.log(coursesArray);
+    console.log(tableData);
 
     return (
         <div className="table-container">

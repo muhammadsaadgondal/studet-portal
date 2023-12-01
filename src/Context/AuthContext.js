@@ -37,7 +37,7 @@ const fetchData = async (reg, password) => {
 };
 
 export const AuthContextProvider = ({ children }) => {
-    const [currentUser, setCurrentUser] = useState();
+    const [currentUser, setCurrentUser] = useState({});
 
     const customLogin = async (reg, password) => {
         try {
@@ -46,15 +46,13 @@ export const AuthContextProvider = ({ children }) => {
             if (userData != null) {
                 console.log(userData);
                 // console.log(`Here it is ${userData.name}`);
-                // if (userData !== null) {
-                //     await auth.signInWithEmailAndPassword(reg, password);
-                // }
                 /* Msla ha user state updation ont workig */
+                
 
-                setCurrentUser(userData);
+                setCurrentUser(userData)
                 // const tempUser=userData;
             }
-            // console.log(`Checking the state updation ${currentUser.name}`);
+            console.log(`Checking the state updation ${currentUser}`);
             return userData;
 
         } catch (error) {

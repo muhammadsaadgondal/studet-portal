@@ -21,7 +21,7 @@ const Login = () => {
             const tempUser = await login(reg, password);
 
             if (tempUser != null) {
-                // console.log(`Hui Hui welcome :${tempUser.name} plus ${currentUser}`);
+                console.log(`Hui Hui welcome :${tempUser.name} plus ${currentUser}`);
                 Loggingin();
                 // Redirect to the dashboard or another page
                 updateState("Dashboard");
