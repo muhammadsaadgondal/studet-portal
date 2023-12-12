@@ -1,0 +1,195 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Matches BottomSection 1`] = `
+<div
+  className="bottomMain"
+  data-testid="bottom-main"
+>
+  <div
+    className="mainContainer"
+  >
+    <h2>
+      Latest
+    </h2>
+    <hr />
+    <div
+      className="container"
+    >
+      <div
+        className="imageContainer"
+      >
+        <h3>
+          CRP Guide
+        </h3>
+        <div
+          className=""
+          style={Object {}}
+        >
+          <div
+            className=""
+            id=""
+          />
+        </div>
+        <p>
+          How to do CPR on an Adult over 12 years age.
+        </p>
+        <button>
+          Learn More
+        </button>
+      </div>
+      <div
+        className="imageContainer"
+      >
+        <h3>
+          COMSATS
+        </h3>
+        <div
+          className=""
+          style={Object {}}
+        >
+          <div
+            className=""
+            id=""
+          />
+        </div>
+        <p>
+          COMSATS University Islamabad Intro,duction.
+        </p>
+        <button>
+          Learn More
+        </button>
+      </div>
+      <div
+        className="imageContainer"
+      >
+        <h3>
+          NEWS
+        </h3>
+        <div
+          className=""
+          style={Object {}}
+        >
+          <div
+            className=""
+            id=""
+          />
+        </div>
+        <p>
+          Eagle Eye With Moazam Shahbaz, 20 Oct 2019
+        </p>
+        <button>
+          Learn More
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="eventsMain"
+  >
+    <h2>
+      Events
+    </h2>
+    <hr />
+    <div
+      className="scrollContainer"
+    >
+      <div
+        className="eventBoxMain"
+      >
+        <div
+          className="eventDate"
+        >
+          <h2>
+            22 July
+          </h2>
+          <p>
+            22-31 July, 2019
+          </p>
+        </div>
+        <div>
+          <h3>
+            COMSATS Summer Workshops Art, Design & Architecture
+          </h3>
+          <a
+            href="#"
+          >
+            Read More
+          </a>
+        </div>
+      </div>
+      <div
+        className="eventBoxMain"
+      >
+        <div
+          className="eventDate"
+        >
+          <h2>
+            11 July
+          </h2>
+          <p>
+            11-12 July, 2019
+          </p>
+        </div>
+        <div>
+          <h3>
+            Training Workshop on 'PYTHON: Data Analysis and Visualization'
+          </h3>
+          <a
+            href="#"
+          >
+            Read More
+          </a>
+        </div>
+      </div>
+      <div
+        className="eventBoxMain"
+      >
+        <div
+          className="eventDate"
+        >
+          <h2>
+            11 July
+          </h2>
+          <p>
+            11-12 July, 2019
+          </p>
+        </div>
+        <div>
+          <h3>
+            Training Workshop on 'PYTHON: Data Analysis and Visualization'
+          </h3>
+          <a
+            href="#"
+          >
+            Read More
+          </a>
+        </div>
+      </div>
+      <div
+        className="eventBoxMain"
+      >
+        <div
+          className="eventDate"
+        >
+          <h2>
+            11 July
+          </h2>
+          <p>
+            11-12 July, 2019
+          </p>
+        </div>
+        <div>
+          <h3>
+            Training Workshop on 'PYTHON: Data Analysis and Visualization'
+          </h3>
+          <a
+            href="#"
+          >
+            Read More
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

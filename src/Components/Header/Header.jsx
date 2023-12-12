@@ -13,7 +13,7 @@ const Header = () => {
 
             <img
                     src="./assets/images/CUOnlineStudentConsole.png"
-                    alt="Comsats Logo"
+                    alt="cui Logo"
                     className="header-right"
                 />
         </div>

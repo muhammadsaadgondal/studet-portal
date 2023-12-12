@@ -5,9 +5,10 @@ import Events from "./Events/Events";
 
 
 const BottomSection = () => {
-    return <div className="bottomMain">
+    return <div data-testid="bottom-main" className="bottomMain">
         <Latest />
         <Events />
+        <button type="submit" disabled></button>
     </div>
 }
 

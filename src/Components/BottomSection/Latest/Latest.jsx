@@ -5,17 +5,17 @@ const latestObject = [{
     title: "CRP Guide",
     description: "How to do CPR on an Adult over 12 years age.",
     thumbnailURL: "https://youtu.be/bAM0YkNLf7M",
-    url: "https://youtu.be/ckiaNqOrG5U"
+    url: "https://youtu.be/bAM0YkNLf7M"
 }, {
     title: "COMSATS",
     description: "COMSATS University Islamabad Intro,duction.",
     thumbnailURL: "https://youtu.be/bAM0YkNLf7M",
-    url: "https://www.youtube.com/watch?v=tONNlv6osG4&list=PL5cz44VCrscVrzSJ9ptlybpWyKdIypvPj"
+    url: "https://youtu.be/8kJAeYR7-xw"
 }, {
     title: "NEWS",
     description: "Eagle Eye With Moazam Shahbaz, 20 Oct 2019",
     thumbnailURL: "https://youtu.be/bAM0YkNLf7M",
-    url: "https://www.youtube.com/watch?v=_oio2uZAuaM"
+    url: "https://youtu.be/r9jgXMq7Iaw"
 }]
 
 const Latest = () => {

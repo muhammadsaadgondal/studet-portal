@@ -12,6 +12,7 @@ import ProfilePage from "./Pages/ProfilePage/ProfilePage";
 import NoPage from "./Pages/NoPage/NoPage";
 /* FIREBASE DATABASE  */
 import datafetch from "./services/dataFetch";
+import SubjectDetail from "./Components/SubjectDetail/SubjectDetail";
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         <Route path="dashboard" element={<StudentPage />} />
         <Route path="registration" element={<Registration />} />
         <Route path="profile" element={<ProfilePage />} />
+        <Route path="SubjectDetail/:subject" element={<SubjectDetail />} />
         <Route path="*" element={<NoPage />} />
       </Routes>
 
