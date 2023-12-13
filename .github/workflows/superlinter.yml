@@ -9,6 +9,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Display repository content
+        run: ls -R
+
       - name: Run super-linter
         uses: github/super-linter@v3
         env:
