@@ -1,3 +1,4 @@
+import { config } from 'dotenv';
 import jwt from 'jsonwebtoken';
 
 const authController = {
