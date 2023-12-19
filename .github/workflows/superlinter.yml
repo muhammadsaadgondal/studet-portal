@@ -1,32 +1,25 @@
-name: Super-Linter
+name: Lint Code
+
 on: push
 
 jobs:
-  super-lint:
+  lint-code:
     name: Lint code base
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Display repository content
-        run: ls -R
+      - name: Install Node.js and npm
+        uses: actions/setup-node@v4
+        with:
+          node-version: '14'
 
       - name: Install dependencies
-        run: |
-          npm install -g eslint stylelint
-          npm install
+        run: npm install
 
       - name: Run ESLint
-        run: eslint .
+        run: npx eslint .
 
       - name: Run Stylelint
-        run: stylelint "**/*.css"
-
-      - name: Run super-linter
-        uses: github/super-linter@v4
-        env:
-          DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          linters: ""
+        run: npx stylelint "**/*.css"
