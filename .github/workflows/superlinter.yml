@@ -14,7 +14,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm install -g stylelint
+          npm install -g eslint stylelint
           npm install
 
       - name: Run ESLint
