@@ -4,7 +4,7 @@ import StudentHeader from "../../Components/StudentHeader/StudentHeader";
 const NoPage = () => {
     return <Fragment>
         <StudentHeader />
-        <h1 style={{color:"red"}}>ROM ROM Bhaiyo</h1>
+        <h4 style={{color:"red"}}>No page Found</h4>
     </Fragment>
 }
 

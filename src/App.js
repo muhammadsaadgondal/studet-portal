@@ -36,7 +36,7 @@ function App() {
         <Route path="dashboard" element={<StudentPage />} />
         <Route path="registration" element={<Registration />} />
         <Route path="profile" element={<ProfilePage />} />
-        <Route path="SubjectDetail/:subject" element={<SubjectDetail />} />
+        <Route path="SubjectDetail" element={<SubjectDetail />} />
         <Route path="*" element={<NoPage />} />
       </Routes>
 

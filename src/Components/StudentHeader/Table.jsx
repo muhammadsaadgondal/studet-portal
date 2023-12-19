@@ -6,7 +6,7 @@ const TableRow = ({ data }) => (
     <tr className='rowItem'>
         {data.map((cell, index) => (
             <td key={index}>
-                <Link to={`/SubjectDetail/${cell}`}>
+                <Link to={`/SubjectDetail`}>
                     {index === data.length - 1 && (
                         <div className="progress-bar">
                             <div className="filled-bar" style={{ width: `${data[data.length - 1]}%` }}>
