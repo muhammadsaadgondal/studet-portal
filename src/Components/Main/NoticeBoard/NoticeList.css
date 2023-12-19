@@ -1,5 +1,6 @@
 .all-list {
-    border: 15px solid white; /* Add a solid white border */
+    border: 15px solid white;
+    /* Add a solid white border */
     background-image: url('./chalkboard.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -10,7 +11,7 @@
     /* padding: ; */
     /* Remove padding */
     list-style-type: none;
-    padding: 3px 30px; 
+    padding: 3px 30px;
     height: 290px;
     width: 52%;
     margin-left: 7%;

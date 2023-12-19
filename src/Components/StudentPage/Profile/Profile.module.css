@@ -1,31 +1,34 @@
-
-.profile-main{
+.profile-main {
     background-color: aliceblue;
     margin: 3% 8%;
     padding: 1% 2%;
     border-radius: 5px;
     padding-bottom: 10px;
 }
-.profile-main hr{
-background-color: black;
-/* margin-bottom: -20px; */
-height: 2px;
+
+.profile-main hr {
+    background-color: black;
+    /* margin-bottom: -20px; */
+    height: 2px;
 }
-.profile-main h6{
+
+.profile-main h6 {
     font-size: 0.9rem;
     margin: 0;
 }
-.profile-main p{
+
+.profile-main p {
     font-size: 0.9rem;
     margin: 10px 0;
 }
- .red-text{
+
+.red-text {
     color: red;
     font-size: 1rem;
 }
 
 /* Middle section that has all the detail */
-.profile-info{
+.profile-info {
     display: flex;
     margin: 5px;
     /* background-color: violet; */
@@ -33,24 +36,29 @@ height: 2px;
     /* padding-top: -30px; */
     /* height: 25px; */
 }
-.profile-info h6{
+
+.profile-info h6 {
     margin: 0;
     font-size: 0.9rem;
     /* background-color: blueviolet; */
 }
-.profile-info p{
+
+.profile-info p {
     margin-left: 5px;
     font-size: 0.9rem;
     margin-top: 0;
 }
-.profile-mid{
+
+.profile-mid {
     display: flex;
 }
-.faIcon{
+
+.faIcon {
     height: 70px;
     margin: 10px;
 }
-.profile-mid-right{
+
+.profile-mid-right {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -58,25 +66,28 @@ height: 2px;
 }
 
 /* Table */
-.profile-table{
-  border: 1px solid #ddd ;
-  /* border-collapse: collapse; */
-  width: 100%;
-  min-width: 500px;
-  margin: 20px auto;
-  text-align: center;
+.profile-table {
+    border: 1px solid #ddd;
+    /* border-collapse: collapse; */
+    width: 100%;
+    min-width: 500px;
+    margin: 20px auto;
+    text-align: center;
 }
-.profile-table-container{
 
-    overflow-x:scroll;
+.profile-table-container {
+
+    overflow-x: scroll;
 }
-.profile-table-head{
+
+.profile-table-head {
     color: #ddd;
     background-color: rgb(33, 33, 67);
     padding: 10px;
     font-size: 0.9rem;
 }
-.profile-table-body{
-padding: 10px;
-border: 1px solid #ddd;
+
+.profile-table-body {
+    padding: 10px;
+    border: 1px solid #ddd;
 }

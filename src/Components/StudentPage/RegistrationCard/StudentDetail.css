@@ -3,25 +3,29 @@
     /* background-color: aquamarine; */
     border-radius: 10px;
 }
-.student-detail-main p{
+
+.student-detail-main p {
     font-size: 0.9rem;
 }
-.student-detail-row{
+
+.student-detail-row {
     width: 50%;
     padding-left: 2%;
-    
+
 }
-.student-detail-row2{
+
+.student-detail-row2 {
     /* text-align: right; */
     /* background-color: blue; */
     /* width: 40%; */
     padding-left: 15%;
 
 }
+
 .title-span {
-    width: 150px; /* Adjust the width as needed */
+    width: 150px;
+    /* Adjust the width as needed */
     display: inline-block;
     text-align: left;
-    padding-right: 10px; 
-  }
-  
+    padding-right: 10px;
+}

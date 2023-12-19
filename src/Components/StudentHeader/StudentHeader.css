@@ -15,7 +15,7 @@
 .toggle-button {
   position: relative;
   left: 50px;
-  bottom:20px;
+  bottom: 20px;
   /* margin-left: 20%; */
 }
 
@@ -70,18 +70,21 @@
     /* Show the OptionTab items when the button is clicked */
   }
 }
+
 @media (max-width :400px) {
-  .logo{
+  .logo {
     flex-direction: column;
     /* background-color: yellow; */
   }
 }
 
-@media only screen and (max-width :800px){
-  .student-header{
+@media only screen and (max-width :800px) {
+  .student-header {
     flex-direction: column;
     /* background-color: yellowgreen; */
-  }.student-image {
+  }
+
+  .student-image {
     /* background-color: tomato; */
     margin-left: 0;
   }

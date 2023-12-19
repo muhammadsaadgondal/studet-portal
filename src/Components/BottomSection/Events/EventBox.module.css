@@ -1,4 +1,4 @@
-.eventBoxMain{
+.eventBoxMain {
     display: flex;
     height: 50%;
     /* background-color: yellowgreen; */
@@ -15,24 +15,27 @@
     margin-right: 10px;
 }
 
-.eventBoxMain h3{
+.eventBoxMain h3 {
     color: aliceblue;
     font-size: 1rem;
     margin-bottom: 0;
     margin-top: 10px;
 }
-.eventBoxMain h2{
+
+.eventBoxMain h2 {
     background-color: rgb(95, 209, 171);
     margin-bottom: 0;
     margin-top: 10px;
 }
-.eventBoxMain p{
-    color:rgb(95, 209, 171);
+
+.eventBoxMain p {
+    color: rgb(95, 209, 171);
     margin-top: 2px;
     font-size: small;
     padding-bottom: 5px;
 }
-.eventBoxMain a{
+
+.eventBoxMain a {
     font-size: 0.8rem;
     color: cadetblue;
 }

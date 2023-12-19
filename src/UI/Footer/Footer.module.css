@@ -1,5 +1,4 @@
-
-.footerMain{
+.footerMain {
     position: -webkit-sticky;
     bottom: 0;
     left: 0;
@@ -9,9 +8,11 @@
     align-items: center;
     background-color: rgb(30, 30, 59);
 }
-.footerMain p{
- color: aliceblue;
+
+.footerMain p {
+    color: aliceblue;
 }
-.footerMain a{
+
+.footerMain a {
     color: aqua;
 }

@@ -1,4 +1,4 @@
-.imageContainer{
+.imageContainer {
     margin: 15px;
     padding: 10px 15px;
     /* height: 250px; */
@@ -7,14 +7,15 @@
     overflow: hidden;
 }
 
-.img{
+.img {
     height: 55%;
     /* width: auto; */
     /* background-color: violet; */
     margin-top: -10px;
     /* overflow: hidden; */
 }
-.imageContainer p{
+
+.imageContainer p {
     margin-top: 2px;
     /* background-color: turquoise; */
     margin-bottom: 5px;
@@ -22,11 +23,13 @@
     color: black;
     font-size: small;
 }
-.imageContainer h3{
+
+.imageContainer h3 {
     margin-top: 5px;
     /* background-color: turquoise; */
 }
-.imageContainer button{
+
+.imageContainer button {
     margin-top: -20px;
     background-color: rgb(30, 30, 79);
     color: aliceblue;

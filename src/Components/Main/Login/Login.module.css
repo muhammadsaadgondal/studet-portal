@@ -1,9 +1,7 @@
-
-
-
 .submitBtn {
   height: 40px;
-  width: 100%; /* Adjust the width to be a percentage of the parent container */
+  width: 100%;
+  /* Adjust the width to be a percentage of the parent container */
   border-radius: 5px;
   border: 0;
   margin: 4px;
@@ -14,7 +12,8 @@
 }
 
 .forgotPwd {
-  margin-top: 10px; /* Increase the top margin for better spacing */
+  margin-top: 10px;
+  /* Increase the top margin for better spacing */
   font-size: 0.9rem;
 }
 
@@ -22,89 +21,103 @@
   color: red;
   text-decoration: underline;
   font-size: 0.9rem;
-  margin-top: 5px; /* Increase the top margin for better spacing */
+  margin-top: 5px;
+  /* Increase the top margin for better spacing */
 }
 
 
 /* 
 
 */
-.main-container{
-    border: 15px solid white; /* Add a solid white border */
-    background-color: white;
-    width: 20%;
-    border-radius: 10px;
-     max-width: 400px;
-    padding: 3px 30px; 
-    margin: 1%;
-    margin-top: 1.2%;
-    /* margin-top: 2.2%; */
-    /* margin-left: 10px; */
+.main-container {
+  border: 15px solid white;
+  /* Add a solid white border */
+  background-color: white;
+  width: 20%;
+  border-radius: 10px;
+  max-width: 400px;
+  padding: 3px 30px;
+  margin: 1%;
+  margin-top: 1.2%;
+  /* margin-top: 2.2%; */
+  /* margin-left: 10px; */
 }
 
 .btn {
-    height: 30px;
-    width: 45%;
-    border-radius: 5px 5px 0 0; /* Top-left and top-right corners have border radius */
-    /* Other button styles */
-    border: 0;
-    margin: 4px;
-    padding: 10px;
-    margin-top: 10px;
-  }
-  .btn1{
-    background-color: rgb(17, 17, 58);
-    color: aliceblue;
-  }
-
-  .btn2{
-    background-color: rgb(95, 209, 171);
-    color: aliceblue;
-    /* width: 50%; */
-    margin-left: -1px;
-  }
-  .pswd,.text{
-    
-    /* display: block; */
-    width: 100%;
-    height: 25px;
-    margin-top: 5px;
-  }
-  .captcha-container {
-    width: 100%; /* Set the width to 100% of the parent container */
-    max-width: 300px; /* Set a maximum width for larger screens if needed */
-    /* Add any other necessary styles for the Captcha container */
+  height: 30px;
+  width: 45%;
+  border-radius: 5px 5px 0 0;
+  /* Top-left and top-right corners have border radius */
+  /* Other button styles */
+  border: 0;
+  margin: 4px;
+  padding: 10px;
+  margin-top: 10px;
 }
 
-  .loginSection{
-    display: flex;
-    flex-direction: column;
-  }
-  .error {
-    color: red;
-    font-size: 14px;
-    margin-top: 10px;
+.btn1 {
+  background-color: rgb(17, 17, 58);
+  color: aliceblue;
 }
-  .submitBtn{
-    height: 40px;
-    width: 30%;
-    border-radius: 5px; /* Top-left and top-right corners have border radius */
-    /* Other button styles */
-    border: 0;
-    margin: 10px;
-    padding: 10px;
-    margin-top: 10px;
-    background-color: rgb(17, 17, 58);
-    color: aliceblue;
-  }
-  .forgotPwd{
-    /* background-color: yellowgreen; */
-    margin-top: -5px;
-    font-size: 0.9rem;
-  }
-  .parentConsole{
-    color: red;
-    text-decoration: underline;
-    font-size: 0.9rem;
-    /* background-color: aqua; */
-  }
+
+.btn2 {
+  background-color: rgb(95, 209, 171);
+  color: aliceblue;
+  /* width: 50%; */
+  margin-left: -1px;
+}
+
+.pswd,
+.text {
+
+  /* display: block; */
+  width: 100%;
+  height: 25px;
+  margin-top: 5px;
+}
+
+.captcha-container {
+  width: 100%;
+  /* Set the width to 100% of the parent container */
+  max-width: 300px;
+  /* Set a maximum width for larger screens if needed */
+  /* Add any other necessary styles for the Captcha container */
+}
+
+.loginSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.submitBtn {
+  height: 40px;
+  width: 30%;
+  border-radius: 5px;
+  /* Top-left and top-right corners have border radius */
+  /* Other button styles */
+  border: 0;
+  margin: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: rgb(17, 17, 58);
+  color: aliceblue;
+}
+
+.forgotPwd {
+  /* background-color: yellowgreen; */
+  margin-top: -5px;
+  font-size: 0.9rem;
+}
+
+.parentConsole {
+  color: red;
+  text-decoration: underline;
+  font-size: 0.9rem;
+  /* background-color: aqua; */
+}

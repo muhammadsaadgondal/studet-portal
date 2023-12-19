@@ -1,19 +1,21 @@
-
- .eventsMain{
+.eventsMain {
     padding-left: 2%;
     max-width: 27%;
-   
-}  
+
+}
+
 .scrollContainer {
     max-width: 100%;
     height: 40%;
-    overflow-y: scroll; /* Enable vertical scroll */
+    overflow-y: scroll;
+    /* Enable vertical scroll */
 }
-.eventsMain h2{
+
+.eventsMain h2 {
     color: white;
 }
 
-.eventsMain hr{   
+.eventsMain hr {
     margin-bottom: 20px;
     background-color: white;
 }

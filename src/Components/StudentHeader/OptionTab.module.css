@@ -1,7 +1,7 @@
 .info-item {
   width: calc(16.66%);
   border-radius: 5px;
-  height:  50px;
+  height: 50px;
   background-color: aliceblue;
   display: flex;
   flex-direction: column;
@@ -10,7 +10,8 @@
   margin: 5px;
   flex-wrap: nowrap;
 }
-.active-item{
+
+.active-item {
   background-color: steelblue;
   font-size: 3rem;
 }
@@ -41,9 +42,9 @@
   } */
 }
 
-@media screen and (max-width:990px){
+@media screen and (max-width:990px) {
   .info-item {
-    
-  /* width: calc(20.66%); */
+
+    /* width: calc(20.66%); */
   }
 }

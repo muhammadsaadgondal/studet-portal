@@ -1,16 +1,18 @@
-.btn-main{
+.btn-main {
     /* background-color: khaki; */
     padding: 0 10%;
     width: calc(30%);
     /* margin-left: 50px; */
     margin-bottom: 10px;
 }
-.btn-back{
+
+.btn-back {
     background-color: aliceblue;
     width: calc(100%);
 }
-.toggle-button{
+
+.toggle-button {
     background-color: rgb(38, 7, 69);
     /* height: 100%; */
-    padding:8px;
+    padding: 8px;
 }

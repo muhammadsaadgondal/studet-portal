@@ -1,11 +1,12 @@
-.bottom-header{
+.bottom-header {
     display: flex;
 }
 
- hr{
+hr {
     color: black;
 }
-.bottomMain{
+
+.bottomMain {
     display: flex;
-    
+
 }

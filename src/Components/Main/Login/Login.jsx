@@ -32,7 +32,7 @@ const Login = () => {
             const tempUser = await login(reg, password);
             if (tempUser != null) {
                 // console.log(`Hui Hui welcome: ${tempUser.name} plus ${currentUser}`);
-                if(captchaSelected){
+                if (captchaSelected) {
                     Loggingin();
                     // Redirect to the dashboard or another page
                     updateState("Dashboard");
