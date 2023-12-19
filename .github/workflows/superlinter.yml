@@ -13,5 +13,5 @@ jobs:
       - name: Display stylelint.config.js
         run: cat stylelint.config.js
 
-      - name: Run Stylelint
-        run: stylelint "**/*.css"
+      - name: Run Stylelint with config
+        run: stylelint --config stylelint.config.js "**/*.css"
