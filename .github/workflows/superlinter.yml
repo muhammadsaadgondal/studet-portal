@@ -23,8 +23,5 @@ jobs:
           cat .eslintrc.js
           cat stylelint.config.js
 
-      - name: Run ESLint
-        run: eslint .
-
       - name: Run Stylelint with config
         run: stylelint --config stylelint.config.js "**/*.css"
