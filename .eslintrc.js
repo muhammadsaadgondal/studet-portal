@@ -1,13 +1,13 @@
 module.exports = {
     extends: [
-        "stylelint-config-recommended",
-        "stylelint-config-recommended-scss",
-        "stylelint-config-prettier",
+      'react-app',
+      'react-app/jest',
+      'plugin:jest-dom/recommended',
     ],
     // Add any additional rules or overrides here
     rules: {
-        "block-opening-brace-space-before": null,
-        "indentation": 4,
-        // Add or modify other rules as needed
+      'no-sequences': 'off',  // Disable the no-sequences rule
+      'no-restricted-globals': ['error', 'window'],  // Only allow the 'window' global
     },
-};
+  };
+  
