@@ -22,7 +22,7 @@ const RegistrationCard = () => {
 
     // Function to handle printing the card
     const handlePrintCard = () => {
-        window.print(); // This will open the browser's print dialog
+        // window.print(); 
     };
 
     return (
