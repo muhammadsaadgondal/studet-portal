@@ -15,11 +15,13 @@ jobs:
         with:
           node-version: '19'
 
-      - name: Install stylelint and dependencies
-        run: npm install -g stylelint stylelint-config-recommended
+      - name: Install ESLint and Stylelint and dependencies
+        run: npm install -g eslint stylelint stylelint-config-recommended stylelint-config-recommended-scss
 
-      - name: Display stylelint.config.js
-        run: cat stylelint.config.js
+      - name: Display eslint and stylelint.config.js
+        run: |
+          cat .eslintrc.js
+          cat stylelint.config.js
 
       - name: Run Stylelint with config
         run: stylelint --config stylelint.config.js "**/*.css"
