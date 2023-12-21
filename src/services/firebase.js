@@ -5,7 +5,7 @@ import { getAuth } from "firebase/auth";
 
 
 const FireBaseConfig = {
-  apiKey: "AIzaSyDbcCguWa3xWxlrC7K0NtMzYN5FHgutSec",
+  apiKey: process.env.FIREBASE_API_KEY,
   authDomain: "studentportal-1696640684536.firebaseapp.com",
   projectId: "studentportal-1696640684536",
   storageBucket: "studentportal-1696640684536.appspot.com",
