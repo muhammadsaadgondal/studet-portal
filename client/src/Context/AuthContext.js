@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-import context from "react-bootstrap/esm/AccordionContext"
 import { getAuth } from 'firebase/auth';
 /* FIREBASE DATABASE  */
 import datafetch from "../services/dataFetch";
