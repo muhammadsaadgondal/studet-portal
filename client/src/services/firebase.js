@@ -4,7 +4,7 @@ import { getDatabase } from "firebase/database";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_API_KEY,
+  apiKey: "AIzaSyDbcCguWa3xWxlrC7K0NtMzYN5FHgutSec",
   authDomain: "studentportal-1696640684536.firebaseapp.com",
   databaseURL: "https://studentportal-1696640684536-default-rtdb.firebaseio.com",
   projectId: "studentportal-1696640684536",
