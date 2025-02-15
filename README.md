@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 Live demo:https://studet-portal.vercel.app/
-CREDS:
+# CREDS for login
 reg:fa21-bcs-035
 pass:saadstar1
 
