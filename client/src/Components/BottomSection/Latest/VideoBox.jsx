@@ -10,7 +10,7 @@ const VideoBox = (props) => {
             <h3>{props.currObj.title}</h3>
             <IFrameComponent url={props.currObj.url} />
             <p>{props.currObj.description}</p>
-            <button>Learn More</button>
+            <a href="https://www.wikipedia.org/"> Learn More</a>
         </div>
     );
 }

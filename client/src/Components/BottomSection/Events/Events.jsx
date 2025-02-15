@@ -25,8 +25,7 @@ const eveList = [
 const Events = () => {
     return (
         <div className={classes.eventsMain}>
-            <h2>Events</h2>
-            <hr />
+            <h2>Upcoming Events</h2>
             <div className={classes.scrollContainer}>
                 {eveList.map((obj, index) => (
                     <EventBox key={index} currObj={obj} />

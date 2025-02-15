@@ -1,13 +1,25 @@
-.container {
+.mainContainer {
+    width: 100%;
     display: flex;
-    /* margin: 20px; */
-    /* padding: 10px; */
-    /* background-color: brown; */
+    flex-direction: column;
+    align-items: center;
 }
 
-.mainContainer {
-    padding-left: 8%;
-    max-width: 55%;
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    gap: 5px;
+    justify-content: center; /* Aligns videos in a row */
+}
+
+.videoCard {
+    flex: 1;
+    background-color: aqua;
+    /* min-width: 250px; */
+    max-width: 48%;
+    max-width: 200px;
 }
 
 .mainContainer h2 {
@@ -17,4 +29,12 @@
 .mainContainer hr {
     margin-bottom: 20px;
     background-color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .mainContainer {
+        max-width: 100%;
+        text-align: center;
+    }
 }

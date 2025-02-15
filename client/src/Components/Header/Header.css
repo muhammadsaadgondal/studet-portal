@@ -1,24 +1,24 @@
 .header-container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 15px 100px;
-  /* Adjust the padding as needed */
-
+  align-items: center;
+  padding: 10px 20px;
+  background-color: transparent; /* Ensure no white background */
+  width: 90%;
 }
 
-.header-left {
-  max-width: 300px;
-  /* Adjust the image size as needed */
-  margin-right: 20px;
-  /* Adjust the margin between the image and h2 */
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.9); */
+.header-left, .header-right {
+  max-width: 300px; /* Limit image size */
+  height: auto;
+  object-fit: contain;
+  background-color: transparent; /* Ensure transparent background */
 }
 
-.header-right {
-  margin: 0;
-  /* Remove default margin */
-  max-width: 300px;
-  /* Adjust the image size as needed */
-
+@media (max-width: 768px) {
+  .header-left {
+      max-width: 40px; /* Smaller size for mobile */
+  }
+  .header-right {
+      max-width: 150px;
+  }
 }

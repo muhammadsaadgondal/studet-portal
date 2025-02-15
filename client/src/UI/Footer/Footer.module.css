@@ -1,18 +1,23 @@
 .footerMain {
-    position: -webkit-sticky;
-    bottom: 0;
-    left: 0;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(30, 30, 59);
+    padding: 10px 0;
+    margin-top: auto; /* Push footer to the bottom */
 }
 
 .footerMain p {
     color: aliceblue;
+    margin: 0; /* Remove default margin */
 }
 
 .footerMain a {
     color: aqua;
+    text-decoration: none; /* Remove underline */
+}
+
+.footerMain a:hover {
+    text-decoration: underline; /* Add underline on hover */
 }

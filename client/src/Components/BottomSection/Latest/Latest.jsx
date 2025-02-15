@@ -21,7 +21,6 @@ const latestObject = [{
 const Latest = () => {
     return <div className={classes.mainContainer}>
         <h2>Latest</h2>
-        <hr />
         <div className={classes.container}>
             {latestObject.map((obj,index) => (
                 <VideoBox key={index} currObj={obj}

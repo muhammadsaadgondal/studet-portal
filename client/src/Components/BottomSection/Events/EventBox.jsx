@@ -11,7 +11,7 @@ const EventBox = (props) => {
             </div>
             <div>
                 <h3>{props.currObj.description}</h3>
-                <a href="#">Read More</a>
+                <a href="https://www.wikipedia.org/">Read More</a>
             </div>
         </div>
     );
