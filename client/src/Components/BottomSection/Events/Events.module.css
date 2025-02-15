@@ -1,14 +1,16 @@
 .eventsMain {
-    padding-left: 2%;
-    max-width: 27%;
-
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .scrollContainer {
-    max-width: 100%;
-    height: 40%;
-    overflow-y: scroll;
-    /* Enable vertical scroll */
+    display: flex;
+    flex-direction: column;  /* Stack items vertically */
+    gap: 15px;
+    justify-content: flex-start; /* Aligns to the top */
+    width: 100%;
 }
 
 .eventsMain h2 {
@@ -18,4 +20,12 @@
 .eventsMain hr {
     margin-bottom: 20px;
     background-color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .eventsMain {
+        max-width: 100%;
+        text-align: center;
+    }
 }

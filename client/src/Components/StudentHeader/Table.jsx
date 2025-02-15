@@ -7,14 +7,15 @@ const TableRow = ({ data }) => (
         {data.map((cell, index) => (
             <td key={index}>
                 <Link to={`/SubjectDetail`}>
-                    {index === data.length - 1 && (
+                    {index === data.length - 1 ? (
                         <div className="progress-bar">
-                            <div className="filled-bar" style={{ width: `${data[data.length - 1]}%` }}>
-                                {data[data.length - 1]}%
+                            <div className="filled-bar" style={{ width: `${cell}%` }}>
+                                {cell}%
                             </div>
                         </div>
+                    ) : (
+                        cell
                     )}
-                    {index !== data.length - 1 && cell}
                 </Link>
             </td>
         ))}

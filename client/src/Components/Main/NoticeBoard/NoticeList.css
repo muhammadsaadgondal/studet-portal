@@ -1,6 +1,5 @@
 .all-list {
     border: 15px solid white;
-    /* Add a solid white border */
     background-image: url('./chalkboard.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -8,14 +7,15 @@
     overflow-x: scroll;
     color: yellow;
     text-align: left;
-    /* padding: ; */
-    /* Remove padding */
     list-style-type: none;
     padding: 3px 30px;
-    height: 290px;
-    width: 52%;
-    margin-left: 7%;
+    height: 390px;
     border-radius: 5px;
+
+    /* Remove fixed width and margin-left */
+    width: auto;
+    margin-left: 0;
+    flex-grow: 1; /* Allows it to take more space inside flex container */
 }
 
 .all-list h1 {
@@ -27,7 +27,6 @@
     margin: 10px 0;
 }
 
-/* Style the hr element if needed */
 hr {
     border: none;
     height: 1px;

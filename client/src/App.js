@@ -16,6 +16,7 @@ import SubjectDetail from "./Components/SubjectDetail/SubjectDetail";
 
 function App() {
   const { loggedIn } = useLoginContext();
+  console.log("Site Key:", process.env.REACT_APP_RECAPTCHA_SITE_KEY);
   useEffect(() => {
     // fetchData();
   }, [loggedIn]);
